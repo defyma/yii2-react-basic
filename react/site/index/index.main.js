@@ -8,15 +8,19 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends Component {
+import App from '../../components/App'
+
+class Main extends Component {
 
     render() {
         return (
             <div>
                 Hello From yii2-react
+
+
             </div>
         );
     }
 }
 
-ReactDOM.render(<App />, document.querySelector("#root-react"));
+ReactDOM.render(<App><Main /></App>, document.querySelector("#root-react"));
