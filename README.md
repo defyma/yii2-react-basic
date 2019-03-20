@@ -1,7 +1,8 @@
 Yii2-react-basic Template
 ---------------------
 - JSX file dir in "@app/react/{following with controller and action dir}"
-- Build file dir in "@web/build/{following with controller dir}"
+- Develompent Build in "@app/chunk"
+- Build file dir in "@web/build"
 
 How to:
 -------
