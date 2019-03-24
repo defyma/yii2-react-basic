@@ -68,6 +68,9 @@ module.exports = function () {
             errorDetails: true
         },
         watch: argv.watch,
+        performance: {
+            hints: false
+        },
         module: {
             rules: [
                 {
