@@ -1,17 +1,22 @@
 <?php namespace app\components;
 
 /**
- * WebHelper.php
+ * ReactHelper.php
  *
  * @Author: Defy M Aminuddin <defyma> <http://defyma.com>
  * @Email:  defyma85@gmail.com
- * @Filename: WebHelper.php
+ * @Filename: ReactHelper.php
  */
 use yii\base\Component;
 
 class ReactHelper extends Component
 {
-
+    /**
+     * getReactMode
+     *
+     * @return string development | production
+     * @default development
+     */
     public static function getReactMode()
     {
         $rootPath = \Yii::getAlias('@app');
@@ -29,6 +34,7 @@ class ReactHelper extends Component
      *
      * @param $context
      * @param $yiiAppCon
+     * @return bundle JS from NPM
      */
     public static function getReactJs($context, $yiiAppCon)
     {
@@ -43,12 +49,18 @@ class ReactHelper extends Component
         $path = \Yii::getAlias('@app') . "/web/". $appFolder . "/" . $folder;
 
         $arrFile = [];
-        $di = new \RecursiveDirectoryIterator($path);
-        foreach (new \RecursiveIteratorIterator($di) as $filename => $file) {
-            if(!is_dir($filename)) {
-                $arrFile[] = $filename;
-            }
+
+        try {
+            $di = new \RecursiveDirectoryIterator($path);
+            foreach (new \RecursiveIteratorIterator($di) as $filename => $file) {
+                if(!is_dir($filename)) {
+                    $arrFile[] = $filename;
+                }
+            }    
+        } catch (\Exception $e) {
+            echo "Please RUN: `npm start` for development OR `npm run build` for production!!";die();
         }
+        
 
         foreach ($arrFile as $file)
         {

@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 
 import Header from './Header'
+import Footer from './Footer'
 
 class App extends Component {
 
@@ -14,6 +15,9 @@ class App extends Component {
 
                 {/*Content Will Load Here*/}
                 {this.props.children}
+
+
+                <Footer/>
 
             </div>
         );

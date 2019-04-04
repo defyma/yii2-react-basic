@@ -15,10 +15,10 @@ class Main extends Component {
     render() {
         return (
             <div>
-
-                Hello From yii2-react
+                
+                About Page 
                 <br />
-                Edit This file on 'react/site/index/index.main.js'	
+                Edit This file on 'react/site/about/about.main.js'	
 
             </div>
         );

@@ -21,6 +21,11 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <script type="text/javascript">
+    	
+    	__MYSITE__ = '<?=\yii\helpers\Url::base()?>/';
+
+    </script>
     <?php $this->head() ?>
 </head>
 <body>
