@@ -49,6 +49,13 @@ $config = [
             ],
         ],
         'db' => $db,
+         'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+                ],
+            ],
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,

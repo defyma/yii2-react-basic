@@ -1,6 +1,6 @@
 Yii2-react-basic Template
 ---------------------
-This template just making yii2 as backend service API, and react as view in yii2 in 1 bundle + use native php/yii2 navigation 
+Yii2 as backend service API (ajax), and react as view in yii2 in 1 bundle + use native php/yii2 navigation 
 
 - JSX file dir in "@app/react/{following with controller and action dir}"
 - Develompent Build in "@app/chunk"

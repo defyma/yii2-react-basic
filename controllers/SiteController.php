@@ -125,4 +125,17 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionGetdata()
+    {
+        //for example loading
+        sleep(3);
+
+        $data = [
+            'success' => true,
+            'message' => "This Message From Ajax Call"
+        ];
+
+        return $this->asJson($data);
+    }
 }
