@@ -54,6 +54,9 @@ $config = [
                 'yii\web\JqueryAsset' => [
                     'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
                 ],
+                'yii\web\YiiAsset' => [
+                    'js'=>[]
+                ],
             ],
         ],
         'urlManager' => [
@@ -73,7 +76,7 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['127.0.0.2', '::2'],
     ];
 
     $config['bootstrap'][] = 'gii';
