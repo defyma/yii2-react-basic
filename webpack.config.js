@@ -27,12 +27,12 @@ var entryObject = glob.sync('./react/**/*.main.js').reduce(
 
         var matchForRename = /^\.\/react\/([\w\d_]+\/[\w\d_]+)\/[\w\d_]+\.main\.js$/g.exec(entry);
         if (matchForRename !== null && typeof matchForRename[1] !== 'undefined') {
-            entries[matchForRename[1]] = entry;
+            entries[matchForRename[1]] = ['babel-polyfill', entry];;
         }
 
         var matchModules = /^\.\/react\/([\w\d_]+\/[\w\d_]+\/[\w\d_]+\/[\w\d_]+)\/[\w\d_]+\.main\.js$/g.exec(entry);
         if (matchModules !== null && typeof matchModules[1] !== 'undefined') {
-            entries[matchModules[1]] = entry;
+            entries[matchModules[1]] = ['babel-polyfill', entry];;
         }
 
         return entries;
