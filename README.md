@@ -6,8 +6,20 @@ Yii2 as backend service API (ajax), and react as view in yii2 in 1 bundle + use 
 - Develompent Build in "@app/chunk"
 - Build file dir in "@web/build"
 
-How to:
--------
+# How to:
+# Using composer ceate project:
+
+```
+composer create-project defyma/yii2-react-basic <folder>
+
+then: 
+$ cd <folder> 
+$ npm install
+$ npm start
+```
+
+# Manual:
+
 1. clone this repo
 2. composer install
 3. npm install
