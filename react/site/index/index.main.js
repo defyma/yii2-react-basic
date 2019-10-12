@@ -33,7 +33,7 @@ class Main extends Component {
 		 */
     	$.ajax({
     		method: 'GET',
-    		url: window.__MYSITE__ + 'index.php?r=site/getdata',
+    		url: window.__MYSITE__ + 'site/getdata',
     		type: 'json',
     		success: (result) => {
     			if(result.success) {
